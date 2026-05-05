@@ -1,1 +1,251 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DXL Express | Global Shipping</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #ffcc00;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #d40511;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 25px;
+}
+
+/* TRACK BOX */
+.track-box {
+  display: flex;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.track-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  outline: none;
+}
+
+.track-box button {
+  background: #d40511;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.action {
+  max-width: 250px;
+}
+
+.action h3 {
+  color: #d40511;
+  margin-bottom: 10px;
+}
+
+/* SERVICES */
+.services {
+  background: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* PROMO */
+.promo {
+  background: #d40511;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #aaa;
+  padding: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">DXL Express</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Shipping</a>
+    <a href="#">Tracking</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Fast & Reliable Worldwide Shipping</h1>
+    <p>Delivering your parcels safely across the globe.</p>
+
+    <div class="track-box">
+      <input type="text" placeholder="Enter tracking number">
+      <button>Track</button>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIONS -->
+<section class="actions">
+  <div class="action">
+    <h3>Track Shipment</h3>
+    <p>Monitor your package in real time.</p>
+  </div>
+
+  <div class="action">
+    <h3>Ship Now</h3>
+    <p>Create and manage shipments easily.</p>
+  </div>
+
+  <div class="action">
+    <h3>Find Locations</h3>
+    <p>Locate nearby drop-off points.</p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Services</h2>
+
+  <div class="service-grid">
+    <div class="service">
+      <h3>Express Delivery</h3>
+      <p>Fast international delivery services.</p>
+    </div>
+
+    <div class="service">
+      <h3>Freight Services</h3>
+      <p>Air, sea and road freight solutions.</p>
+    </div>
+
+    <div class="service">
+      <h3>Supply Chain</h3>
+      <p>Smart logistics and warehousing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section class="promo">
+  <h2>Global Delivery You Can Trust</h2>
+  <p>Serving over 200 countries worldwide.</p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 DXL Express. All rights reserved.
+</div>
+
+</body>
+</html>
