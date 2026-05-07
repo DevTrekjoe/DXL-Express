@@ -270,6 +270,62 @@ body{
     grid-template-columns:1fr;
   }
 }
+  .nav-left{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+}
+
+.logo-small{
+  display:none;
+  font-size:22px;
+  font-weight:800;
+  color:#d40511;
+}
+
+/* hamburger */
+.menu-toggle{
+  display:none;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* mobile menu hidden by default */
+@media(max-width:900px){
+
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 20px;
+  }
+
+  .logo-small{
+    display:block;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    gap:15px;
+    padding:10px 0;
+  }
+
+  .nav-links.right{
+    border-top:1px solid #eee;
+    margin-top:10px;
+    padding-top:10px;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+}
 </style>
 </head>
 <body>
@@ -292,13 +348,23 @@ body{
 <!-- NAV -->
 <div class="navbar">
 
-  <div class="nav-links">
+  <div class="nav-left">
+    <div class="logo-small">CargEx</div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </div>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+
     <a href="#">Track</a>
     <a href="#">Ship</a>
     <a href="#">Customer Service</a>
+
   </div>
 
-  <div class="nav-links">
+  <div class="nav-links right">
     <a href="#">Customer Portal</a>
   </div>
 
@@ -430,6 +496,10 @@ body{
   </div>
 
 </footer>
-
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 </body>
 </html>
