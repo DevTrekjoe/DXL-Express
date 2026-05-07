@@ -21,14 +21,6 @@ body{
 }
 
 /* TOP BAR */
-.topbar{
-  background:#ffcc00;
-  height:72px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 50px;
-}
 
 .logo{
   font-size:42px;
@@ -187,7 +179,22 @@ body{
   justify-content:center;
   font-size:34px;
 }
+.topbar{
+  background:#ffcc00;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 50px;
+  flex-wrap:wrap;
+  gap:10px;
+}
 
+.top-links{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+}
 .card h3{
   margin-bottom:10px;
   font-size:24px;
@@ -334,6 +341,47 @@ body{
     display:flex;
   }
 }
+  @media(max-width:900px){
+
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 20px;
+    position:relative;
+    z-index:1000;
+    background:#fff;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#fff;
+    padding:10px 0;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+    font-size:30px;
+    cursor:pointer;
+  }
+}
+  @media(max-width:900px){
+
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 20px;
+  }
+
+  .top-links{
+    gap:15px;
+  }
+}
 </style>
 </head>
 <body>
@@ -357,19 +405,15 @@ body{
 <div class="navbar">
 
   <div class="nav-left">
-    
+    <div class="logo-small">CargEx</div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-      ☰
-    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 
   <div class="nav-links" id="navLinks">
-
     <a href="#">Track</a>
     <a href="#">Ship</a>
     <a href="#">Customer Service</a>
-
   </div>
 
   <div class="nav-links right">
@@ -377,7 +421,6 @@ body{
   </div>
 
 </div>
-
 <!-- HERO -->
 <section class="hero">
 
